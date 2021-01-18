@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/danjl23/PassportBoilerplate.svg?branch=main)](https://travis-ci.com/danjl23/PassportBoilerplate)
+
 # Passport.js Boilerplate
 An Express App which allows users to create accounts, and login with Passport.js authentication. Accounts & Sessions are stored in MongoDB.
 
