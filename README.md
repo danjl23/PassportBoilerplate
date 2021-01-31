@@ -4,6 +4,7 @@
 An Express App which allows users to create accounts, and login with Passport.js authentication. Accounts & Sessions are stored in MongoDB.
 
 ## To-Do List
+- [ ] **Fix Issues with reCaptcha (Bug)**
 - [x] Reset Password System
 - [x] Store Session in MongoDB
 - [x] reCAPTCHA
