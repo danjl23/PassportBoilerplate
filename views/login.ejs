@@ -1,0 +1,35 @@
+<h1>Login</h1>
+<%- include ('./partials/messages') %>
+<form action="/login" method="POST">
+    <div>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" required>
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+<!--Sign in with Google-->
+<% if (process.env.GOOGLE_ENABLED == 'true') { %>
+<a href="/google">Sign in with Google</a>
+<% } %>
+
+<a href="/reset">Reset Password</a>
+<a href="/register">Register</a>
+
+<!--reCAPTCHA-->
+<% if (process.env.CAPTCHA_ENABLED == 'true') { %>
+    <%- captcha %>
+<% } %>
+<script>
+    function cb(token) {
+        var input = document.createElement('input')
+        input.setAttribute('type', 'hidden')
+        input.setAttribute('name', 'g-recaptcha-response')
+        input.setAttribute('value', token)
+        document.getElementsByTagName('form')[0].appendChild(input)
+    }
+</script>
